@@ -43,6 +43,7 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #555;
 }
+
 /* footer styling */
 .footer {
   background-color: #333;
@@ -68,6 +69,7 @@ footer .social-icons a {
    margin: 0 5px;
    display: inline-block;
 }
+
 /* Homepage */
 .homepage {
   align-items: center;
@@ -85,3 +87,5 @@ footer .social-icons a {
   text-align: center; 
   justify-content: center; margin: 20px 10px;
 }
+
+/* Button styling */
