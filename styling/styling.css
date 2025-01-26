@@ -16,33 +16,34 @@ body {
 
 /* Header styling */
 header {
-  background-color: #333;
-  color: white;
-  padding: 10px 0;
+  background-color: #333; /* Dark background */
+  color: white; /* White text color */
+  padding: 10px 0; /* Add some vertical padding */
+  text-align: center; /* Center everything inside the header */
+  font-family: Arial, sans-serif; /* Clean font */
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+header nav {
+  display: inline-block; /* Ensure the nav content is inline and centered */
 }
 
-nav ul li {
-  margin: 0;
+header a {
+  color: white; /* White links */
+  text-decoration: none; /* Remove underlines */
+  padding: 5px 10px; /* Add padding for spacing */
+  font-size: 16px; /* Ensure consistent font size */
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-  padding: 10px 20px;
-  transition: background-color 0.3s;
+header a:hover {
+  text-decoration: underline; /* Add an underline when hovering */
 }
 
-nav ul li a:hover {
-  background-color: #555;
+header nav span {
+  color: #888; /* Make the "|" separator lighter */
+  margin: 0 5px; /* Add spacing around the separator */
 }
+
+
 
 /* footer styling */
 .footer {
@@ -86,4 +87,58 @@ footer .social-icons a {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center; 
   justify-content: center; margin: 20px 10px;
+}
+
+/* styling for register and login */
+* {box-sizing: border-box}
+
+.container {
+  padding: 16px;
+  border: solid, 3px, black;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbtn {
+  background-color: #838fb9;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
 }

@@ -1,10 +1,16 @@
+<?php
+session_start();
+include 'database/connectdb.php';
+?>
+<link rel="stylesheet" href="styling/styling.css">
 <header>
-    <nav>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="login.php">login</a></li>
-      </ul>
-    </nav>
-  </header>
+        <nav>
+            <a href="index.php">Home</a>
+            |
+            <?php if (isset($_SESSION["username"])): ?>
+                <a href="logout.php">Log out</a>
+            <?php else: ?>
+                <a href="login.php">Log in</a>
+            <?php endif; ?>
+        </nav>
+    </header>
