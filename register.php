@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <link rel="stylesheet" href="styling/register.css">
   <div class="container">
   <form action="registratie.php" method="post">
-        Registreer een gebruiker<br><br>
+        Register a user<br><br>
         <label for="name">Naam:</label>
         <input type="text" id="name" placeholder="name" name="name" required><br>
         <label for="username">Email:</label>
@@ -58,6 +58,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <option value="medewerker">medewerker</option>
                         <option value="admin">admin</option>
                     </select><br><br>
-        <input type="submit" value="registreer" name="register_submit">
+        <input type="submit" value="Register" name="register_submit">
     </form>
   </div>
