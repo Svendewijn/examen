@@ -1,5 +1,5 @@
 <?php
-include 'database/connectdb.php';
+include 'database/connectdb.php'; // Ensure this path is correct
 
 $message = "";
 $toastClass = "";
@@ -29,8 +29,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->execute()) {
             $message = "Account created successfully";
             $toastClass = "#28a745"; // Success color
+            header("Location: login.php");
+            exit();
         } else {
-            $message = "Error: " . $stmt->error;
+            $message = "Error: {$stmt->error}";
             $toastClass = "#dc3545"; // Danger color
         }
 
@@ -43,9 +45,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <?php include 'header.php';?>
-<link rel="stylesheet" href="styling/register.css">
-  <div class="container">
-  <form action="registratie.php" method="post">
+<link rel="stylesheet" href="styling/login.css">
+<div class="container">
+  <form action="register.php" method="post">
         Register a user<br><br>
         <label for="name">Naam:</label>
         <input type="text" id="name" placeholder="name" name="name" required><br>
@@ -55,9 +57,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="password" id="password" placeholder="password" name="password" required><br>
         <label for="role">Rol:</label>
         <select id="role" name="role">
-                        <option value="medewerker">medewerker</option>
-                        <option value="admin">admin</option>
+                        <option value="medewerker">Admin</option>
+                        <option value="admin">Medewerker</option>
+                        <option value="admin">Verdeler</option>
                     </select><br><br>
         <input type="submit" value="Register" name="register_submit">
     </form>
-  </div>
+</div>
